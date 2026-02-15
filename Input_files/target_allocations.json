@@ -1,0 +1,149 @@
+[
+  {
+    "allocation_id": "ALLOC-001",
+    "portfolio_id": "PORT-001",
+    "asset_class": "US Equity",
+    "target_percentage": 30.0,
+    "sub_allocations": {
+      "Large Cap": 18.0,
+      "Mid Cap": 7.5,
+      "Small Cap": 4.5
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 25.0,
+    "rebalance_band_upper": 35.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-002",
+    "portfolio_id": "PORT-001",
+    "asset_class": "International Equity",
+    "target_percentage": 20.0,
+    "sub_allocations": {
+      "Developed Markets": 12.0,
+      "Emerging Markets": 8.0
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 15.0,
+    "rebalance_band_upper": 25.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-003",
+    "portfolio_id": "PORT-001",
+    "asset_class": "Bonds",
+    "target_percentage": 30.0,
+    "sub_allocations": {
+      "Government": 15.0,
+      "Corporate IG": 10.0,
+      "High Yield": 5.0
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 25.0,
+    "rebalance_band_upper": 35.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-004",
+    "portfolio_id": "PORT-001",
+    "asset_class": "REITs",
+    "target_percentage": 10.0,
+    "sub_allocations": {
+      "Residential": 4.0,
+      "Commercial": 3.5,
+      "Industrial": 2.5
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 5.0,
+    "rebalance_band_upper": 15.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-005",
+    "portfolio_id": "PORT-001",
+    "asset_class": "Commodities",
+    "target_percentage": 5.0,
+    "sub_allocations": {
+      "Gold": 3.0,
+      "Energy": 1.5,
+      "Agriculture": 0.5
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 0.0,
+    "rebalance_band_upper": 10.0,
+    "allocation_strategy": "Tactical",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-006",
+    "portfolio_id": "PORT-001",
+    "asset_class": "Cash",
+    "target_percentage": 5.0,
+    "sub_allocations": {},
+    "drift_tolerance": 3.0,
+    "rebalance_band_lower": 2.0,
+    "rebalance_band_upper": 8.0,
+    "allocation_strategy": "Tactical",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-007",
+    "portfolio_id": "PORT-002",
+    "asset_class": "US Equity",
+    "target_percentage": 30.0,
+    "sub_allocations": {
+      "Large Cap": 25.0,
+      "Mid Cap": 5.0
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 25.0,
+    "rebalance_band_upper": 35.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2024-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-008",
+    "portfolio_id": "PORT-002",
+    "asset_class": "International Equity",
+    "target_percentage": 15.0,
+    "sub_allocations": {
+      "Developed Markets": 15.0
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 10.0,
+    "rebalance_band_upper": 20.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2024-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-009",
+    "portfolio_id": "PORT-002",
+    "asset_class": "Bonds",
+    "target_percentage": 50.0,
+    "sub_allocations": {
+      "Government": 35.0,
+      "Corporate IG": 15.0
+    },
+    "drift_tolerance": 5.0,
+    "rebalance_band_lower": 45.0,
+    "rebalance_band_upper": 55.0,
+    "allocation_strategy": "Strategic",
+    "last_updated": "2024-01-15"
+  },
+  {
+    "allocation_id": "ALLOC-010",
+    "portfolio_id": "PORT-002",
+    "asset_class": "Cash",
+    "target_percentage": 5.0,
+    "sub_allocations": {},
+    "drift_tolerance": 3.0,
+    "rebalance_band_lower": 2.0,
+    "rebalance_band_upper": 8.0,
+    "allocation_strategy": "Tactical",
+    "last_updated": "2024-01-15"
+  }
+]

@@ -1,0 +1,11 @@
+allocation_id,portfolio_id,asset_class,target_percentage,sub_allocations,drift_tolerance,rebalance_band_lower,rebalance_band_upper,allocation_strategy,last_updated
+ALLOC-001,PORT-001,US Equity,30.0,"{""Large Cap"": 18.0, ""Mid Cap"": 7.5, ""Small Cap"": 4.5}",5.0,25.0,35.0,Strategic,2025-01-15
+ALLOC-002,PORT-001,International Equity,20.0,"{""Developed Markets"": 12.0, ""Emerging Markets"": 8.0}",5.0,15.0,25.0,Strategic,2025-01-15
+ALLOC-003,PORT-001,Bonds,30.0,"{""Government"": 15.0, ""Corporate IG"": 10.0, ""High Yield"": 5.0}",5.0,25.0,35.0,Strategic,2025-01-15
+ALLOC-004,PORT-001,REITs,10.0,"{""Residential"": 4.0, ""Commercial"": 3.5, ""Industrial"": 2.5}",5.0,5.0,15.0,Strategic,2025-01-15
+ALLOC-005,PORT-001,Commodities,5.0,"{""Gold"": 3.0, ""Energy"": 1.5, ""Agriculture"": 0.5}",5.0,0.0,10.0,Tactical,2025-01-15
+ALLOC-006,PORT-001,Cash,5.0,{},3.0,2.0,8.0,Tactical,2025-01-15
+ALLOC-007,PORT-002,US Equity,30.0,"{""Large Cap"": 25.0, ""Mid Cap"": 5.0}",5.0,25.0,35.0,Strategic,2024-01-15
+ALLOC-008,PORT-002,International Equity,15.0,"{""Developed Markets"": 15.0}",5.0,10.0,20.0,Strategic,2024-01-15
+ALLOC-009,PORT-002,Bonds,50.0,"{""Government"": 35.0, ""Corporate IG"": 15.0}",5.0,45.0,55.0,Strategic,2024-01-15
+ALLOC-010,PORT-002,Cash,5.0,{},3.0,2.0,8.0,Tactical,2024-01-15
