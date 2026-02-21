@@ -1,0 +1,506 @@
+/* RebalanceRecommendation.css */
+/* Custom styles for ML-powered rebalance recommendation UI */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  
+  --model-cvxpy: #3498db;
+  --model-xgboost: #e74c3c;
+  --model-lstm: #2ecc71;
+  --model-llm: #9b59b6;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Gradient Cards */
+.gradient-card {
+  background: var(--primary-gradient);
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.gradient-card-success {
+  background: var(--success-gradient);
+}
+
+.gradient-card-warning {
+  background: var(--warning-gradient);
+}
+
+.gradient-card-info {
+  background: var(--info-gradient);
+}
+
+/* Health Metrics */
+.health-metric-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.health-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.health-metric-card.drift {
+  border-left-color: #FF6B6B;
+}
+
+.health-metric-card.risk {
+  border-left-color: #FFE66D;
+}
+
+.health-metric-card.sharpe {
+  border-left-color: #95E1D3;
+}
+
+/* Model Contribution Cards */
+.model-card {
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.model-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.model-card.cvxpy {
+  border-left-color: var(--model-cvxpy);
+}
+
+.model-card.xgboost {
+  border-left-color: var(--model-xgboost);
+}
+
+.model-card.lstm {
+  border-left-color: var(--model-lstm);
+}
+
+.model-card.llm {
+  border-left-color: var(--model-llm);
+}
+
+/* Confidence Meter */
+.confidence-meter {
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  overflow: hidden;
+  position: relative;
+}
+
+.confidence-meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+}
+
+.confidence-meter-fill.high {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+}
+
+.confidence-meter-fill.medium {
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+.confidence-meter-fill.low {
+  background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%);
+}
+
+/* Trade Table Styles */
+.trade-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.trade-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.trade-table thead th {
+  font-weight: 600;
+  padding: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.trade-table tbody tr {
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.trade-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.05);
+  transform: scale(1.01);
+}
+
+.trade-table tbody tr.priority-high {
+  border-left-color: #e74c3c;
+}
+
+.trade-table tbody tr.priority-medium {
+  border-left-color: #f39c12;
+}
+
+.trade-table tbody tr.priority-low {
+  border-left-color: #3498db;
+}
+
+/* Impact Visualization */
+.impact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.impact-card:hover {
+  border-color: var(--model-cvxpy);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-arrow {
+  font-size: 48px;
+  margin: 0 16px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.impact-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.impact-value.before {
+  color: #95a5a6;
+}
+
+.impact-value.after {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Insight Cards */
+.insight-card {
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid;
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.insight-card.tax-optimization {
+  border-left-color: #2ecc71;
+  background: linear-gradient(90deg, rgba(46, 204, 113, 0.05) 0%, white 100%);
+}
+
+.insight-card.market-timing {
+  border-left-color: #3498db;
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.05) 0%, white 100%);
+}
+
+.insight-card.risk-management {
+  border-left-color: #f39c12;
+  background: linear-gradient(90deg, rgba(243, 156, 18, 0.05) 0%, white 100%);
+}
+
+/* Execution Steps */
+.execution-stepper {
+  padding: 24px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+}
+
+.execution-step {
+  position: relative;
+  padding: 16px;
+  padding-left: 48px;
+  margin-bottom: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.execution-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.execution-step.active::before {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(1.1); }
+}
+
+/* Action Buttons */
+.action-button-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  margin-top: 24px;
+}
+
+.action-button {
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.action-button.primary {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.action-button.secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.action-button.danger {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+/* Loading Animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 48px;
+}
+
+.loading-spinner {
+  width: 64px;
+  height: 64px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #667eea;
+  font-weight: 600;
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Badge Styles */
+.confidence-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 6px;
+}
+
+.confidence-badge.high {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+
+.confidence-badge.medium {
+  background: rgba(243, 156, 18, 0.15);
+  color: #e67e22;
+}
+
+.confidence-badge.low {
+  background: rgba(231, 76, 60, 0.15);
+  color: #c0392b;
+}
+
+/* Priority Badge */
+.priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-badge.high {
+  background: #e74c3c;
+  color: white;
+}
+
+.priority-badge.medium {
+  background: #f39c12;
+  color: white;
+}
+
+.priority-badge.low {
+  background: #3498db;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gradient-card {
+    padding: 16px;
+  }
+  
+  .health-metric-card {
+    padding: 12px;
+  }
+  
+  .impact-value {
+    font-size: 1.5rem;
+  }
+  
+  .action-button-container {
+    flex-direction: column;
+  }
+  
+  .trade-table {
+    font-size: 12px;
+  }
+  
+  .execution-step {
+    padding-left: 40px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --text-primary: #eee;
+    --text-secondary: #aaa;
+  }
+  
+  .health-metric-card,
+  .model-card,
+  .impact-card,
+  .insight-card,
+  .execution-step {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  
+  .trade-table tbody tr:hover {
+    background: rgba(102, 126, 234, 0.15);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .action-button-container,
+  .execution-stepper {
+    display: none;
+  }
+  
+  .gradient-card {
+    background: white;
+    color: black;
+    border: 2px solid #667eea;
+  }
+  
+  .trade-table {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus States */
+button:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
